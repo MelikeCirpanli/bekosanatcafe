@@ -1,0 +1,88 @@
+/* Dil Değiştirici Butonu */
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50px;
+    color: #f9f7f4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.language-toggle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.language-toggle:hover::before {
+    left: 100%;
+}
+
+.language-toggle:hover {
+    background: rgba(212, 175, 55, 0.2);
+    border-color: rgba(212, 175, 55, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.language-toggle:active {
+    transform: translateY(0);
+}
+
+.lang-icon {
+    font-size: 1.2rem;
+    animation: rotateGlobe 3s ease-in-out infinite;
+}
+
+@keyframes rotateGlobe {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(20deg); }
+}
+
+.lang-text {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Navigation düzeni güncellemesi */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Dil değişimi animasyonu */
+[data-tr], [data-en] {
+    transition: opacity 0.3s ease;
+}
+
+.lang-switching {
+    opacity: 0;
+}
+
+/* Mobil için */
+@media (max-width: 768px) {
+    .language-toggle {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    nav {
+        flex-wrap: wrap;
+    }
+}
