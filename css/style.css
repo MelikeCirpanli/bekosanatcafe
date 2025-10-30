@@ -21,10 +21,10 @@ header {
     background: rgba(44, 24, 16, 0.95);
     backdrop-filter: blur(10px);
     padding: 1rem 0;
-    position: sticky;
+    /*position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);*/
     border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
@@ -881,11 +881,17 @@ section {
         padding: 0.8rem 0;
     }
     
+    /* --- 2. Header (Navigasyon) Düzeni --- */
     nav {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        padding: 0;
+    
+        /* DÜZELTMELER: */
+        width: 100%;            /* Genişliği ekranı doldurmaya zorla */
+        max-width: 100%;        /* Masaüstünden kalan max-width'i geçersiz kıl */
+        padding: 0 15px;        /* Diğer .container'lar gibi kenarlara boşluk ver */
+        box-sizing: border-box; /* Padding'in genişliğe dahil olmasını sağla */
     }
     
     .logo {
