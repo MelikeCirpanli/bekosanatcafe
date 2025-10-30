@@ -1910,3 +1910,96 @@ footer p {
         transform: translateY(0);
     }
 }
+/* --- Menü Kartları Stili --- */
+
+/* Kartların içinde duracağı grid yapısı */
+.menu-grid {
+    display: grid;
+    /* Responsive tasarım: 
+      - En az 250px genişliğinde kartlar sığdır.
+      - Sığdığı kadar yan yana koy (auto-fill).
+      - Kalan boşluğu eşit paylaştır (1fr).
+    */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px; /* Kartlar arası boşluk */
+}
+
+/* Her bir menü kartının temel stili */
+.menu-item {
+    background-color: #ffffff; /* Kart arka planı */
+    border-radius: 10px;       /* Yumuşak kenarlar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Hafif gölge */
+    overflow: hidden;          /* Görselin kenarlarını kartla uyumlu keser */
+    display: flex;             /* Dikey hizalama için */
+    flex-direction: column;    /* İçerik dikey sıralanacak (Resim -> Yazı) */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Kartların üzerine gelince hafifçe yükselme efekti */
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Menü kartındaki görsel */
+.menu-item-image {
+    width: 100%;             /* Kartın genişliğini tam kapla */
+    height: 200px;           /* Tüm görseller için sabit yükseklik */
+    object-fit: cover;       /* Resmin oranını bozmadan sığdır (kırpar) */
+    display: block;          /* Resim altındaki istenmeyen boşluğu kaldırır */
+}
+
+/* Görselin altındaki yazı alanı (isim, fiyat, açıklama) */
+.menu-item-content {
+    padding: 15px;
+    /* Kartlar farklı yükseklikte olursa bu alan esneyerek hepsini eşitler */
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+/* İsim ve fiyatın olduğu satır (sizde zaten vardı, küçük ayar) */
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px; /* Açıklama ile arasına boşluk */
+}
+
+/* Yemek adı */
+.menu-item-name {
+    font-size: 1.1rem;  /* 1rem = 16px, bu yaklaşık 17-18px */
+    font-weight: 600;   /* Kalın yazı tipi */
+    color: #333;       /* Koyu gri */
+    line-height: 1.4;
+}
+
+/* Fiyat */
+.menu-item-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #B99470; /* (Sitenizin konseptine uygun olabilecek bir renk tonu) */
+    white-space: nowrap; /* Fiyatın bölünmesini engeller */
+    padding-left: 10px;
+}
+
+/* Açıklama (örn: Döner için) */
+.menu-item-description {
+    font-size: 0.9rem; /* 14px */
+    color: #666;      /* Orta gri */
+    line-height: 1.5;
+    /* Bu, açıklamanın her zaman kartın dibine yakın durmasını sağlar */
+    margin-top: auto; 
+    padding-top: 5px;
+}
+
+/* Kategori Başlıkları (H3) için biraz boşluk */
+.menu-category h3 {
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* Her kategori arasında boşluk */
+.menu-category {
+    margin-bottom: 50px;
+}
