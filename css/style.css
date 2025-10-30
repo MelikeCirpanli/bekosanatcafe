@@ -1895,10 +1895,6 @@ footer p {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.05); }
 }
-/* Sayfa Kaydırma Animasyonu */
-.fade-in {
-    animation: fadeInUp 1.2s ease-out;
-}
 
 @keyframes fadeInUp {
     from {
