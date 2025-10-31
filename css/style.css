@@ -2016,13 +2016,9 @@ footer p {
 .menu-category {
     margin-bottom: 50px;
 }
-
-/*
-  Etkinlik kartları içindeki "Devamını Oku" butonunu (yani .contact-link)
-  doğru şekilde hizalar.
-*/
-.event-content .contact-link,
-.event-content-full .contact-link {
-    margin-top: 1.5rem;   /* Üstündeki metinle arasına boşluk bırakır */
-    align-self: flex-start; /* Kartın en altına değil, metnin altına yaslar */
+/* Etkinlik kartlarındaki "read-more" (açık renkli) butona
+   üstten boşluk vermek için. */
+.event-content .read-more,
+.event-content-full .read-more {
+    margin-top: 1rem; /* Metinle arasına boşluk koyar */
 }
