@@ -831,7 +831,10 @@ section {
     .stories-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+    /* EKLENEN KURAL: Tüm Hikayeler sayfası da 2 sütun olsun */
+    .stories-4-column-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
     /* Menü kategorilerinde başlıklar küçülsün */
     .menu-category h3 {
         font-size: 1.8rem;
