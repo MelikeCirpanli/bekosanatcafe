@@ -1190,6 +1190,11 @@ section {
         gap: 1.5rem;
         padding: 0 1rem;
     }
+    .story-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    }
     
     .story-card-column {
         max-width: 100%;
