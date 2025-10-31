@@ -2016,3 +2016,28 @@ footer p {
 .menu-category {
     margin-bottom: 50px;
 }
+
+/* --- "Devamını Oku" Buton Stili --- */
+
+.btn-read-more {
+    display: inline-block;
+    margin-top: auto; /* Butonu kartın en altına iter */
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(135deg, #2c1810, #4a3020);
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    align-self: flex-start; /* Butonu sola yaslar */
+    margin-top: 1rem; /* Üstündeki metinle arasına boşluk koyar */
+}
+
+.btn-read-more:hover {
+    background: linear-gradient(135deg, #d4af37, #f4e6c3);
+    color: #2c1810;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
