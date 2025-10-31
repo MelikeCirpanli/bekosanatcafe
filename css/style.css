@@ -1046,8 +1046,8 @@ footer p {
 }
 
 .story-article-image {
-    width: 100%;
-    height: 400px;
+    width: 35%;
+    height: 700px;
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 1.5rem;
