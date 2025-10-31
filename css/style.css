@@ -350,9 +350,11 @@ section {
 }
 
 /* Hikayeler */
-.stories .container {
-    max-width: 1400px; /* Make sure this container rule exists */
-}
+.story-container {
+        grid-template-columns: 1fr; /* 2 sütun yerine 1 sütun */
+        gap: 2rem;
+        padding: 0 1rem;
+    }
 
 .stories {
     background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%); /* Your updated background */
@@ -886,12 +888,10 @@ section {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        
-        /* EKLENMESİ GEREKEN DÜZELTMELER: */
-        width: 100%;            /* Genişliği ekranı doldurmaya zorla */
-        max-width: 100%;        /* Masaüstünden kalan max-width'i geçersiz kıl */
-        padding: 0 15px;        /* Kenarlara boşluk ver (TAŞMAYI BU ENGELLEYECEK) */
-        box-sizing: border-box; /* Padding'in genişliğe dahil olmasını sağla */
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
     
     .logo {
@@ -924,15 +924,17 @@ section {
     }
     
     .nav-menu a {
-        font-size: 0.50rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem; /* 0.50rem çok küçüktü, 0.85rem'e çıkarıldı */
+        padding: 0.5rem 1rem; /* Padding artırıldı */
         white-space: nowrap;
     }
     
+    /* Dil seçeneği - yukarı alındı */
     .language-toggle {
         padding: 0.5rem 1rem;
         font-size: 0.85rem;
-        margin-top: 0.5rem;
+        margin-top: 0rem; /* 0.5rem'den 0'a düşürüldü */
+        order: -1; /* Nav menünün üstüne çıkar */
     }
 
     /* --- 3. Hero Section --- */
@@ -1452,10 +1454,10 @@ section {
         font-size: 1.1rem;
     }
     
-    /* Nav menü linkleri daha küçük */
+    /* Nav menü linkleri daha da küçük ekranlarda */
     .nav-menu a {
         font-size: 0.8rem;
-        padding: 0.4rem 0.6rem;
+        padding: 0.4rem 0.8rem;
     }
     
     /* Kartlar daha küçük padding */
@@ -1709,7 +1711,7 @@ footer p {
 
 .story-article-image {
     width: 100%;
-    height: 400px;
+    height: 250px;
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 1.5rem;
@@ -1728,7 +1730,7 @@ footer p {
 }
 
 .story-article h3 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #2c1810;
     margin-bottom: 1rem;
     text-align: center;
@@ -1736,8 +1738,8 @@ footer p {
 }
 
 .story-article p {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.9rem;
+    line-height: 1.7;
     color: #444;
     text-align: left;
     flex-grow: 1;
