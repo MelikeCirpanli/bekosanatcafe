@@ -605,6 +605,7 @@ section {
     color: #666;
     font-size: 0.95rem;
     line-height: 1.7;
+    margin-bottom: 1.5rem; /* <-- BU SATIRI EKLEYİN */
 }
 
 /* İletişim Bölümü */
@@ -1692,8 +1693,8 @@ footer p {
 .event-content-full p {
     font-size: 0.95rem;
     color: #666;
-    flex-grow: 1;
     line-height: 1.7;
+    margin-bottom: 1.5rem;
 }
 
 .stories-page {
@@ -2018,10 +2019,4 @@ footer p {
 /* Her kategori arasında boşluk */
 .menu-category {
     margin-bottom: 50px;
-}
-/* Etkinlik kartlarındaki "read-more" (açık renkli) butona
-   üstten boşluk vermek için. */
-.event-content .read-more,
-.event-content-full .read-more {
-    margin-top: 3rem; /* Metinle arasına boşluk koyar */
 }
