@@ -831,10 +831,7 @@ section {
     .stories-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    /* EKLENEN KURAL: Tüm Hikayeler sayfası da 2 sütun olsun */
-    .stories-4-column-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    
     /* Menü kategorilerinde başlıklar küçülsün */
     .menu-category h3 {
         font-size: 1.8rem;
@@ -878,87 +875,65 @@ section {
         margin: 1rem auto;
     }
 
-    /* --- 2. Header (Navigasyon) Düzeni - KOMPAKT VERSİYON --- */
-
-header {
-    padding: 0.5rem 0;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0;
-    position: relative;
-}
-
-/* Logo sol tarafa küçük */
-.logo {
-    justify-content: flex-start;
-    gap: 6px;
-    padding-left: 0.5rem;
-}
-
-.logo img {
-    width: 30px;
-    height: 30px;
-}
-
-.logo h1 {
-    font-size: 0.85rem;
-    text-align: left;
-}
-
-/* Dil butonu mutlaka yukarıda sağda */
-.language-toggle {
-    position: absolute;
-    right: 0.5rem;
-    top: 0.5rem;
-    padding: 0.25rem 0.6rem;
-    font-size: 0.65rem;
-    margin: 0;
-    z-index: 10;
-}
-
-.lang-icon {
-    font-size: 0.7rem;
-}
-
-.lang-text {
-    font-size: 0.65rem;
-}
-
-/* Menü linkleri tek satırda kaydırılabilir */
-.nav-menu {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 0;
-    width: 100%;
-    padding: 0.4rem 0.5rem;
-    margin-top: 0.3rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    justify-content: flex-start;
-}
-
-.nav-menu::-webkit-scrollbar {
-    display: none;
-}
-
-.nav-menu li {
-    margin: 0;
-    flex-shrink: 0;
-}
-
-.nav-menu a {
-    font-size: 0.7rem;
-    padding: 0.35rem 0.55rem;
-    white-space: nowrap;
-    display: block;
-}
+    /* --- 2. Header (Navigasyon) Düzeni --- */
+    
+    header {
+        padding: 0.8rem 0;
+    }
+    
+    /* --- 2. Header (Navigasyon) Düzeni --- */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        
+        /* EKLENMESİ GEREKEN DÜZELTMELER: */
+        width: 100%;            /* Genişliği ekranı doldurmaya zorla */
+        max-width: 100%;        /* Masaüstünden kalan max-width'i geçersiz kıl */
+        padding: 0 15px;        /* Kenarlara boşluk ver (TAŞMAYI BU ENGELLEYECEK) */
+        box-sizing: border-box; /* Padding'in genişliğe dahil olmasını sağla */
+    }
+    
+    .logo {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-menu li {
+        margin: 0;
+    }
+    
+    .nav-menu a {
+        font-size: 0.50rem;
+        padding: 0.4rem 0.8rem;
+        white-space: nowrap;
+    }
+    
+    .language-toggle {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+    }
 
     /* --- 3. Hero Section --- */
 
