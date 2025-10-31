@@ -934,7 +934,6 @@ section {
         padding: 0.5rem 1rem;
         font-size: 0.85rem;
         margin-top: 0rem; /* 0.5rem'den 0'a düşürüldü */
-        order: -1; /* Nav menünün üstüne çıkar */
     }
 
     /* --- 3. Hero Section --- */
