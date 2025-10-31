@@ -69,6 +69,17 @@ nav {
     font-weight: 700;
     letter-spacing: 0.5px;
 }
+/* Logo linkinin (a.logo) alt çizgisini kaldırır */
+a.logo,
+a.logo:visited {
+    text-decoration: none; /* <-- ARADIĞINIZ TALİMAT BUDUR */
+    color: inherit;
+}
+
+/* Linkin içindeki H1 başlığın renginin de etkilenmemesini sağlar */
+a.logo h1 {
+    color: inherit;
+}
 
 .nav-menu {
     display: flex;
@@ -932,7 +943,7 @@ section {
     /* Dil seçeneği - yukarı alındı */
     .language-toggle {
         padding: 0.5rem 1rem;
-        font-size: 0.85rem;
+        font-size: 0.80rem;
         margin-top: 0rem; /* 0.5rem'den 0'a düşürüldü */
     }
 
