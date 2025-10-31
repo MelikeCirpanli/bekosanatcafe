@@ -2023,5 +2023,5 @@ footer p {
    üstten boşluk vermek için. */
 .event-content .read-more,
 .event-content-full .read-more {
-    margin-top: 0rem; /* Metinle arasına boşluk koyar */
+    margin-top: 3rem; /* Metinle arasına boşluk koyar */
 }
