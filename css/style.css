@@ -1753,11 +1753,14 @@ footer p {
 }
 
 .story-article p {
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: #444;
-    text-align: left;
-    flex-grow: 1;
+    line-height: 1.8; /* Okunabilirliği artırmak için satır aralığı */
+    color: #444;      /* Daha koyu ve okunur bir metin rengi */
+    font-size: 1rem;
+    margin-bottom: 1.5rem; /* Paragraflar arasına boşluk */
+    /* text-align: justify;  Metni iki yana yaslar (isteğe bağlı) */
+    max-width: 100%; /* İçerik alanının tam genişliğini kullanmasını sağlar */
+    margin-left: auto; /* Ortalamak için */
+    margin-right: auto; /* Ortalamak için */
 }
 
 .full-menu-page {
@@ -2020,5 +2023,5 @@ footer p {
    üstten boşluk vermek için. */
 .event-content .read-more,
 .event-content-full .read-more {
-    margin-top: 1rem; /* Metinle arasına boşluk koyar */
+    margin-top: 1.2rem; /* Metinle arasına boşluk koyar */
 }
