@@ -599,6 +599,10 @@ section {
 .events .text-center {
     text-align: center;
 }
+.events .btn {
+    display: inline-block;
+    margin: 0 auto;
+}
 
 /* İletişim Bölümü */
 .contact {
