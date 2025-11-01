@@ -1149,7 +1149,7 @@ footer p {
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -1160,13 +1160,12 @@ footer p {
 }
 
 .story-article-image {
-    width: 60%;
-    height: 800px;
-    border-radius: 15px;
-    overflow: hidden;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
+        height: 200px;  /* 250px'den 200px'e düşür - daha kısa */
+        width: calc(100% + 2rem);  /* Padding'i aş - daha geniş */
+        margin-left: -1rem;
+        margin-right: -1rem;
+        border-radius: 15px 15px 0 0;
+    }
 
 .story-article-image img {
     width: 100%;
