@@ -630,13 +630,13 @@ section {
 }
 
 .gallery-item {
-    flex: 0 0 calc(33.333% - 1.333rem);
+    flex: 0 0 calc(50% - 1rem);
     background: white;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    height: 500px;
+    height: 400px;
 }
 
 .gallery-item:hover {
