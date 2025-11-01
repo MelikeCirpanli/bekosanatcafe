@@ -186,7 +186,8 @@ section {
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s;
-    align-self: flex-end;
+    margin-left: auto;     /* <--- BU SATIRI EKLEYİN (Sağa iter) */
+    align-self: flex-start; /* <--- (Varsayılan değere çekelim) */
     padding: 0.5rem 1rem;
     border-radius: 8px;
     background: rgba(184, 148, 31, 0.1);
@@ -350,8 +351,10 @@ footer p {
     }
 
     .read-more {
-        align-self: center;
+        margin-left: auto;   /* <--- BU SATIRI EKLEYİN (Ortalamak için) */
+        margin-right: auto; /* <--- BU SATIRI EKLEYİN (Ortalamak için) */
         margin-top: 1rem;
+        /* 'align-self' komutuna artık gerek yok */
     }
     
     footer {

@@ -259,9 +259,6 @@
     margin-bottom: 1.5rem;
     line-height: 1.8;
 }
-.story-content .read-more {
-    align-self: flex-end;
-}
 
 /* Duyurular (Anasayfa) */
 .announcements {
