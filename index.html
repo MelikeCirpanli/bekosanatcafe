@@ -272,22 +272,29 @@
 <section id="galeri" class="gallery">
     <div class="container">
         <h2 class="section-title" data-tr="Galeri" data-en="Gallery">Galeri</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="images/gallery/giris-gorsel.jpg" alt="Galeri 1">
+        <div class="gallery-slider-wrapper">
+            <button class="gallery-arrow gallery-arrow-left" aria-label="Önceki">‹</button>
+            <div class="gallery-slider">
+                <div class="gallery-item">
+                    <img src="images/gallery/giris-gorsel.jpg" alt="Galeri 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/oturma-alani.jpg" alt="Galeri 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/tumulus.jpg" alt="Galeri 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/oturma-alani.jpg" alt="Galeri 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/mutfak.jpg" alt="Galeri 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery/ofis.jpg" alt="Galeri 6">
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="images/gallery/oturma-alani.jpg" alt="Galeri 2">
-            </div>
-            <div class="gallery-item">
-                <img src="images/gallery/mutfak.jpg" alt="Galeri 3">
-            </div>
-            <div class="gallery-item">
-                <img src="images/gallery/toplanti-salonu.jpg" alt="Galeri 4">
-            </div>
-            <div class="gallery-item">
-                <img src="images/gallery/ofis.jpg" alt="Galeri 5">
-            </div>
+            <button class="gallery-arrow gallery-arrow-right" aria-label="Sonraki">›</button>
         </div>
     </div>
 </section>
@@ -417,6 +424,23 @@
           observer.observe(el);
         });
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.gallery-slider');
+    const leftArrow = document.querySelector('.gallery-arrow-left');
+    const rightArrow = document.querySelector('.gallery-arrow-right');
+    
+    if (slider && leftArrow && rightArrow) {
+        leftArrow.addEventListener('click', () => {
+            slider.scrollBy({ left: -400, behavior: 'smooth' });
+        });
+        
+        rightArrow.addEventListener('click', () => {
+            slider.scrollBy({ left: 400, behavior: 'smooth' });
+        });
+    }
+});
+</script>
 
 </body>
 </html>
