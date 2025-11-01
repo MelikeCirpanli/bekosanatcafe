@@ -1571,6 +1571,7 @@ footer p {
     
     .story-article-image {
         height: 250px;
+        width: 100%;
     }
     
     .story-article h3 {
