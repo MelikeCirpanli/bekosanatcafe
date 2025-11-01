@@ -1567,10 +1567,11 @@ footer p {
     
     .story-article {
         max-width: 100%;
+        padding: 1rem; 
     }
     
     .story-article-image {
-        height: 250px;
+        height: 300px;
         width: 100%;
     }
     
