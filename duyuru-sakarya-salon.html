@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
+<body>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,76 +12,58 @@
     
     <link rel="icon" type="image/png" href="images/favicon.png">
     
-    <link rel="stylesheet" href="css/global.css"> <link rel="stylesheet" href="css/hikayeler.css">
+    <link rel="stylesheet" href="css/global.css"> <link rel="stylesheet" href="css/duyurular.css">
     
     <link rel="stylesheet" href="css/language.css"> 
 </head>
-<body>
-    <header>
-        <nav class="container">
-            <a class="logo" href="index.html">
-                <img src="images/logo.png" alt="Bekos Logo">
-                <h1 data-tr="Bekos Sanat Cafe" data-en="Bekos Art Cafe">Bekos Sanat Cafe</h1>
-            </a>
-            
-            <ul class="nav-menu">
-                <li><a href="index.html#anasayfa" data-tr="Anasayfa" data-en="Home">Anasayfa</a></li>
-                <li><a href="index.html#menu" data-tr="Menü" data-en="Menu">Menü</a></li>
-                <li><a href="index.html#takılar" data-tr="Takılar" data-en="Jewelry">Takılar</a></li>
-                <li><a href="index.html#hikayeler" data-tr="Hikayeler" data-en="Stories">Hikayeler</a></li>
-                <li><a href="index.html#duyurular" data-tr="Duyurular" data-en="Announcements">Duyurular</a></li>
-                <li><a href="index.html#etkinlikler" data-tr="Etkinlikler" data-en="Events">Etkinlikler</a></li>
-                <li><a href="index.html#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a></li>
-            </ul>
-            
-            <button id="languageToggle" class="language-toggle">
-                <span class="lang-icon">🌐</span>
-                <span class="lang-text">EN</span>
-            </button>
-        </nav>
-    </header>
 
     <main>
-        <section class="event-detail-page"> 
+        <section class="announcement-detail-page"> 
             <div class="container">
 
-                <article class="story-article">
-                    
-                    <h2 class="section-title" 
-                        data-tr="Sakarya Salonumuz Kiralık!" 
-                        data-en="Our Sakarya Hall is for Rent!"> 
-                        Sakarya Salonumuz Kiralık!
-                    </h2>
-                    
-                    <div class="event-info" style="border-bottom: 1px solid #eee; padding-bottom: 2rem;">
-                        <span data-tr="📅 2 Kasım 2025" data-en="📅 November 2, 2025">📅 2 Kasım 2025</span>
+                <h2 class="section-title" 
+                    data-tr="Sakarya Salonumuz Kiralık!" 
+                    data-en="Our Sakarya Hall is for Rent!"> 
+                    Sakarya Salonumuz Kiralık!
+                </h2>
+                
+                <div class="announcement-date" style="text-align: center; margin-bottom: 2rem;">
+                    <span data-tr="📅 2 Kasım 2025" data-en="📅 November 2, 2025">📅 2 Kasım 2025</span>
+                </div>
+
+                <div class="image-text-grid">
+                    <div class="image-text-card">
+                        <img src="images/duyurular/sakarya-salon1.jpg" alt="Sakarya Salonu İç Görünüm">
+                        <p data-tr="Salonumuz, toplantılar ve seminerler için modern ekipmanlarla donatılmıştır. Esnek oturma düzenleriyle her türlü kurumsal etkinliğinize ev sahipliği yapar."
+                           data-en="Our hall is equipped with modern facilities for meetings and seminars. With flexible seating arrangements, it hosts all your corporate events.">
+                           Salonumuz, toplantılar ve seminerler için modern ekipmanlarla donatılmıştır. Esnek oturma düzenleriyle her türlü kurumsal etkinliğinize ev sahipliği yapar.
+                        </p>
                     </div>
-
-                    <div class="story-article-image" style="height: 500px;">
-                        <img src="images/announcement/sakarya-salon.jpg" alt="Bekos Sanat Cafe Sakarya Salonu">
+                    <div class="image-text-card">
+                        <img src="images/duyurular/sakarya-salon2.jpg" alt="Sakarya Salonu Etkinlik Düzeni">
+                        <p data-tr="Özel günleriniz için şık ve sıcak bir atmosfer sunar. Nişan, kına gecesi veya mevlüt gibi kutlamalarınızı unutulmaz kılar."
+                           data-en="It offers an elegant and warm atmosphere for your special days. It makes your celebrations like engagement parties, henna nights or mawlids unforgettable.">
+                           Özel günleriniz için şık ve sıcak bir atmosfer sunar. Nişan, kına gecesi veya mevlüt gibi kutlamalarınızı unutulmaz kılar.
+                        </p>
                     </div>
+                </div>
 
-                    <p data-tr="Seminerler, workshoplar, özel günler, mevlütler, nişanlar, kınalar ve toplantılar için Sakarya salonumuz hizmetinize sunulmuştur. Etkinliklerinizi en özel şekilde gerçekleştirebileceğiniz bu mekan, ihtiyacınıza göre çeşitli düzenlemelere açıktır."
-                       data-en="Our Sakarya hall is available for your seminars, workshops, special days, mawlids, engagement parties, henna nights, and meetings. This venue, where you can hold your events in the most special way, is open to various arrangements according to your needs.">
-                       Seminerler, workshoplar, özel günler, mevlütler, nişanlar, kınalar ve toplantılar için Sakarya salonumuz hizmetinize sunulmuştur. Etkinliklerinizi en özel şekilde gerçekleştirebileceğiniz bu mekan, ihtiyacınıza göre çeşitli düzenlemelere açıktır.
-                    </p>
+                <p class="general-description" data-tr="Sakarya salonumuz, seminerler, workshoplar, özel günler, mevlütler, nişanlar, kınalar ve toplantılar için hizmetinize sunulmuştur. Etkinliklerinizi en özel şekilde gerçekleştirebileceğiniz bu mekan, ihtiyacınıza göre çeşitli düzenlemelere açıktır."
+                   data-en="Our Sakarya hall is available for your seminars, workshops, special days, mawlids, engagement parties, henna nights, and meetings. This venue, where you can hold your events in the most special way, is open to various arrangements according to your needs.">
+                   Sakarya salonumuz, seminerler, workshoplar, özel günler, mevlütler, nişanlar, kınalar ve toplantılar için hizmetinize sunulmuştur. Etkinliklerinizi en özel şekilde gerçekleştirebileceğiniz bu mekan, ihtiyacınıza göre çeşitli düzenlemelere açıktır.
+                </p>
 
-                    <img src="images/announcement/sakarya-salon2.jpg" alt="Sakarya Salonu Düzenleme" class="article-image-inline">
-
+                <div class="article-contact-box">
                     <p data-tr="Rezervasyon ve detaylı bilgi için bizimle iletişime geçebilirsiniz."
                        data-en="You can contact us for reservations and detailed information.">
                        Rezervasyon ve detaylı bilgi için bizimle iletişime geçebilirsiniz.
                     </p>
-
-                    <div class="article-contact-box">
-                        <p data-tr="Rezervasyon için:" data-en="For Reservation:">
-                            <strong>Rezervasyon için:</strong>
-                        </p>
-                        <p><strong>Telefon:</strong> <a href="tel:+905326347066">+90 (532) 634 70 66</a></p>
-                        <p><strong>E-posta:</strong> <a href="mailto:bekosanatcafe@gmail.com">bekosanatcafe@gmail.com</a></p>
-                    </div>
-
-                </article>
+                    <p data-tr="İletişim için:" data-en="For Contact:">
+                        <strong>İletişim için:</strong>
+                    </p>
+                    <p><strong>Telefon:</strong> <a href="tel:+905326347066">+90 (532) 634 70 66</a></p>
+                    <p><strong>E-posta:</strong> <a href="mailto:bekosanatcafe@gmail.com">bekosanatcafe@gmail.com</a></p>
+                </div>
 
             </div>
         </section>
