@@ -356,7 +356,11 @@ section {
     text-align: center;
 }
 
-/* Hikayeler */
+/* Hikayeler - Ana Sayfa */
+.stories .container {
+    max-width: 1400px;
+}
+
 .stories {
     background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
 }
@@ -365,7 +369,6 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
-    max-width: 1400px;
     margin-bottom: 2rem;
 }
 
@@ -386,7 +389,7 @@ section {
 
 .story-image {
     width: 100%;
-    height: 400px;
+    height: 240px;
     overflow: hidden;
     position: relative;
 }
