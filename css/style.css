@@ -596,13 +596,11 @@ section {
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
-.events .text-center {
-    text-align: center;
+.events > .container > .text-center {
+    display: flex;
+    justify-content: center;
     margin-top: 2rem;
-}
-.events .btn {
-    display: inline-block;
-    margin: 0 auto;
+    width: 100%;
 }
 
 
