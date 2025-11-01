@@ -1160,8 +1160,8 @@ footer p {
 }
 
 .story-article-image {
-    width: 50%;
-    height: 750px;
+    width: 60%;
+    height: 800px;
     border-radius: 15px;
     overflow: hidden;
     margin-bottom: 1.5rem;
@@ -1685,8 +1685,8 @@ footer p {
     }
     
     .story-article-image {
-        height: 300px;
-        width: 100%;
+        height: 700px;
+        width: 60%;
     }
     
     .story-article h3 {
