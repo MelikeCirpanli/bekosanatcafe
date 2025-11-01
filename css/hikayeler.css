@@ -159,7 +159,7 @@
     /* 2.B. Mobil: 'etkinlik-gordion.html' Detay Görseli */
     .event-detail-page .story-article-image {
         max-width: 100%; /* Mobilde "dar" olmasına gerek yok, tam genişlik olsun */
-        height: 450px;   /* Mobilde "uzun" (portre) görünüm */
+        height: 550px;   /* Mobilde "uzun" (portre) görünüm */
     }
     
     /* Kart başlığı (mobil) */
