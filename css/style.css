@@ -598,11 +598,13 @@ section {
 }
 .events .text-center {
     text-align: center;
+    margin-top: 2rem;
 }
 .events .btn {
     display: inline-block;
     margin: 0 auto;
 }
+
 
 /* İletişim Bölümü */
 .contact {
