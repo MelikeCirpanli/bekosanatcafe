@@ -364,7 +364,8 @@ section {
 .stories-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
+    max-width: 1400px;
     margin-bottom: 2rem;
 }
 
