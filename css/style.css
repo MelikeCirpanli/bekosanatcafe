@@ -598,14 +598,8 @@ section {
     color: #666;
     font-size: 0.95rem;
     line-height: 1.7;
-    margin-bottom: 1.5rem;
 }
-.events > .container > .text-center {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    width: 100%;
-}
+
 /* Galeri */
 .gallery {
     background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
