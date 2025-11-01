@@ -5,11 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (slider && leftArrow && rightArrow) {
         leftArrow.addEventListener('click', () => {
-            slider.scrollBy({ left: -400, behavior: 'smooth' });
+            const scrollAmount = slider.offsetWidth; // Tam genişlik kadar kaydır
+            slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         });
         
         rightArrow.addEventListener('click', () => {
-            slider.scrollBy({ left: 400, behavior: 'smooth' });
+            const scrollAmount = slider.offsetWidth; // Tam genişlik kadar kaydır
+            slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         });
     }
 });
