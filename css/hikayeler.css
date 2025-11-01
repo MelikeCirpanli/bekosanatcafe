@@ -186,3 +186,52 @@
         margin-bottom: 1.5rem;
     }
 }
+/* =================================================================== */
+/* 3. MAKALE İÇİ EK STİLLER (Görsel ve İletişim Kutusu) */
+/* =================================================================== */
+
+/* Makale içine eklenen 2. görsel için */
+.article-image-inline {
+    width: 100%;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Makale sonundaki iletişim kutusu */
+.article-contact-box {
+    background: #fdfaf6; /* Hafif krem/beyaz bir arkaplan */
+    border: 2px dashed #d4af37; /* Altın rengi kesikli çizgi */
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    margin-top: 2rem;
+}
+
+.article-contact-box p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.article-contact-box a {
+    color: #2c1810; /* Koyu kahve */
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.article-contact-box a:hover {
+    color: #b8941f; /* Altın rengi */
+    text-decoration: underline;
+}
+
+/* Mobil için iletişim kutusu */
+@media (max-width: 768px) {
+    .article-contact-box {
+        padding: 1rem 1.5rem;
+    }
+    .article-contact-box p {
+        font-size: 1rem;
+    }
+}
