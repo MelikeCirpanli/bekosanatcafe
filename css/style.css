@@ -610,7 +610,7 @@ section {
 
 .gallery-slider-wrapper {
     position: relative;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 60px;
 }
@@ -636,7 +636,7 @@ section {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    height: 400px;
+    height: 500px;
 }
 
 .gallery-item:hover {
