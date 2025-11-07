@@ -73,24 +73,50 @@
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
-/* Hakkımızda */
+/* Hakkımızda (GÜNCELLENDİ) */
 .about {
     background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); <-- Bu bazen mobilde yavaşlık yapabilir, gerek yoksa kapalı kalsın */
 }
 
 .about-content {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1000px; /* <-- GENİŞLETİLDİ (Eskiden 800px idi) */
+    margin: 0 auto 2rem; /* Altına boşluk eklendi */
     text-align: center;
     font-size: 1.1rem;
-    line-height: 2;
+    line-height: 1.8; /* Satır aralığı biraz düşürüldü, daha kompakt */
     color: #444;
-    padding: 2rem;
-    background: rgba(255, 255, 255, 0.6);
+    padding: 2.5rem; /* İç boşluk artırıldı */
+    background: rgba(255, 255, 255, 0.8); /* Biraz daha opak */
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.05);
 }
+
+/* YENİ: Bilgi Kutusu Stili */
+.about-info-box {
+    max-width: 800px; /* Ana metinden biraz daha dar, dikkat çeksin */
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f9f7f4 0%, #ffffff 100%); /* Hafif farklı bir ton */
+    border: 2px dashed rgba(212, 175, 55, 0.3); /* Kesik çizgili, şık bir kenarlık */
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.about-info-box h3 {
+    color: #2c1810;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.about-info-box p {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
 /* ========================================= */
 /* YENİ BÖLÜM: Gelecek Etkinlikler (KARTLI) */
 /* ========================================= */
@@ -803,11 +829,12 @@
         max-width: 100%;
     }
 
-    .about-content {
+    .about-content,
+    .about-info-box {
+        max-width: 100%;
         padding: 1.5rem;
-        font-size: 0.95rem;
-        line-height: 1.8;
     }
+}
 
     .menu-gallery {
         grid-template-columns: 1fr;
