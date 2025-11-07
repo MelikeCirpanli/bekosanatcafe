@@ -92,51 +92,47 @@
     box-shadow: 0 8px 32px rgba(0,0,0,0.08);
 }
 /* ========================================= */
-/* YENİ BÖLÜM: Gelecek Etkinlikler Listesi */
+/* YENİ BÖLÜM: Gelecek Etkinlikler (KARTLI) */
 /* ========================================= */
 
 .upcoming-events-list {
-    background: linear-gradient(135deg, #f9f7f4 0%, #ffffff 100%); /* Hafif farklı bir arka plan */
+    background: linear-gradient(135deg, #f9f7f4 0%, #ffffff 100%);
     padding: 4rem 0;
-    border-top: 1px solid rgba(212, 175, 55, 0.1); /* Üstten ince bir ayırıcı çizgi */
-    border-bottom: 1px solid rgba(212, 175, 55, 0.1); /* Alttan ince bir ayırıcı çizgi */
+    /* border-top/bottom çizgileri isteğe bağlı, kaldırabilirsiniz */
 }
 
-.events-list-grid {
+.events-card-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Masaüstünde 2 eşit sütun */
-    gap: 4rem; /* Sütunlar arası geniş boşluk */
-    max-width: 900px; /* Listenin çok yayılmaması için maksimum genişlik */
-    margin: 0 auto; /* Ortalamak için */
+    /* Kartları otomatik sığdır: En az 200px genişliğinde, sığdığı kadar yan yana */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem; /* Kartlar arası boşluk */
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.events-list {
-    list-style: none; /* Madde işaretlerini (noktaları) kaldırır */
-    padding: 0;
-    margin: 0;
-}
-
-.events-list li {
-    font-size: 1.15rem;
+.event-list-card {
+    background: white;
+    padding: 1.5rem 1rem; /* Kart içindeki boşluk (Üst/Alt: 1.5rem, Sağ/Sol: 1rem) */
+    border-radius: 15px;   /* Yuvarlak köşeler */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06); /* Hafif gölge */
+    text-align: center;    /* Yazıyı ortala */
+    font-weight: 500;
     color: #444;
-    padding: 0.8rem 0; /* Satırlar arası boşluk */
-    border-bottom: 1px dashed rgba(212, 175, 55, 0.3); /* Her maddenin altına kesik çizgi */
-    display: flex;
-    align-items: center;
+    font-size: 1.05rem;
+    border: 1px solid rgba(212, 175, 55, 0.15); /* Çok hafif altın rengi kenarlık */
+    transition: all 0.3s ease; /* Hover efekti için yumuşak geçiş */
+    display: flex;           /* Dikey ortalama için */
+    align-items: center;     /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    min-height: 100px;       /* Kartların minimum yüksekliği */
 }
 
-/* Maddelerin başına küçük bir Frig sembolü veya nokta eklemek için */
-.events-list li::before {
-    content: '•'; /* Düz nokta yerine Frig sembolü de kullanabilirsiniz */
-    color: #d4af37; /* Altın rengi */
-    font-size: 1.5rem;
-    margin-right: 10px;
-    line-height: 1;
-}
-
-/* Son maddenin altındaki çizgiyi kaldırmak için */
-.events-list li:last-child {
-    border-bottom: none;
+/* Üzerine gelince efekt */
+.event-list-card:hover {
+    transform: translateY(-5px); /* Hafif yukarı kalkma */
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2); /* Gölgeyi artır ve altın rengi yap */
+    border-color: rgba(212, 175, 55, 0.5); /* Kenarlığı belirginleştir */
+    color: #2c1810; /* Yazı rengini koyulaştır */
 }
 
 /* Menü Preview */
@@ -1022,20 +1018,6 @@
         animation-duration: 0.5s;
     }
 }
-/* --- YENİ BÖLÜM: Gelecek Etkinlikler Mobil Ayarı --- */
-    .events-list-grid {
-        grid-template-columns: 1fr; /* Mobilde tek sütuna düşür */
-        gap: 0; /* Sütun boşluğunu sıfırla */
-    }
-
-    .events-list {
-        margin-bottom: 0; /* Alt liste ile üst liste arasındaki boşluğu ayarla */
-    }
-    
-    /* Mobilde sol sütunun son maddesinin çizgisini geri getir (çünkü altında devamı var) */
-    .events-list-grid .events-list:first-child li:last-child {
-        border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
-    }
 
 /* Çok Küçük Ekranlar (480px ve altı) */
 @media (max-width: 480px) {
