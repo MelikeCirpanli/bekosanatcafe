@@ -91,6 +91,53 @@
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0,0,0,0.08);
 }
+/* ========================================= */
+/* YENİ BÖLÜM: Gelecek Etkinlikler Listesi */
+/* ========================================= */
+
+.upcoming-events-list {
+    background: linear-gradient(135deg, #f9f7f4 0%, #ffffff 100%); /* Hafif farklı bir arka plan */
+    padding: 4rem 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1); /* Üstten ince bir ayırıcı çizgi */
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1); /* Alttan ince bir ayırıcı çizgi */
+}
+
+.events-list-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Masaüstünde 2 eşit sütun */
+    gap: 4rem; /* Sütunlar arası geniş boşluk */
+    max-width: 900px; /* Listenin çok yayılmaması için maksimum genişlik */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+.events-list {
+    list-style: none; /* Madde işaretlerini (noktaları) kaldırır */
+    padding: 0;
+    margin: 0;
+}
+
+.events-list li {
+    font-size: 1.15rem;
+    color: #444;
+    padding: 0.8rem 0; /* Satırlar arası boşluk */
+    border-bottom: 1px dashed rgba(212, 175, 55, 0.3); /* Her maddenin altına kesik çizgi */
+    display: flex;
+    align-items: center;
+}
+
+/* Maddelerin başına küçük bir Frig sembolü veya nokta eklemek için */
+.events-list li::before {
+    content: '•'; /* Düz nokta yerine Frig sembolü de kullanabilirsiniz */
+    color: #d4af37; /* Altın rengi */
+    font-size: 1.5rem;
+    margin-right: 10px;
+    line-height: 1;
+}
+
+/* Son maddenin altındaki çizgiyi kaldırmak için */
+.events-list li:last-child {
+    border-bottom: none;
+}
 
 /* Menü Preview */
 .menu-preview {
@@ -975,6 +1022,20 @@
         animation-duration: 0.5s;
     }
 }
+/* --- YENİ BÖLÜM: Gelecek Etkinlikler Mobil Ayarı --- */
+    .events-list-grid {
+        grid-template-columns: 1fr; /* Mobilde tek sütuna düşür */
+        gap: 0; /* Sütun boşluğunu sıfırla */
+    }
+
+    .events-list {
+        margin-bottom: 0; /* Alt liste ile üst liste arasındaki boşluğu ayarla */
+    }
+    
+    /* Mobilde sol sütunun son maddesinin çizgisini geri getir (çünkü altında devamı var) */
+    .events-list-grid .events-list:first-child li:last-child {
+        border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+    }
 
 /* Çok Küçük Ekranlar (480px ve altı) */
 @media (max-width: 480px) {
